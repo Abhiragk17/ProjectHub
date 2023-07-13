@@ -8,7 +8,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from "next/router";
 function Header() {
   const USER_IMAGE =
-    "https://res.cloudinary.com/dknvsbuyy/image/upload/v1686314044/1617826370281_30f9a2a96a.jpg";
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqsytPMWVwxpEHovnsZ4LqRpP4o4epnFideg&usqp=CAU";
     const { data: session } = useSession()
     const router=useRouter();
   return (
@@ -16,9 +16,10 @@ function Header() {
       className="flex justify-between
     border-b-[2px] border-blue-500 p-4"
     >
-      <Image src="/Images/logo.png" width={140} height={140}
-      alt="logo"
-       className="w-[140px] cursor-pointer" onClick={()=>router.push('/')} />
+      <h2 className="w-[140px] cursor-pointer" onClick={() => router.push('/')}>
+      <span className="font-bold text-lg">Project</span>
+      <span className="text-blue-500 font-bold text-lg">Hub</span>
+    </h2>
       <div className="flex gap-5">
      {session?   <button
           className="px-3 p-2
