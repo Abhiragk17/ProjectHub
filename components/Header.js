@@ -17,8 +17,8 @@ function Header() {
     border-b-[2px] border-blue-500 p-4"
     >
       <h2 className="w-[140px] cursor-pointer" onClick={() => router.push('/')}>
-      <span className="font-bold text-lg">Project</span>
-      <span className="text-blue-500 font-bold text-lg">Hub</span>
+      <span className="font-bold text-[40px]">Project</span>
+      <span className="text-blue-500 font-bold text-[40px]">Hub</span>
     </h2>
       <div className="flex gap-5">
      {session?   <button
@@ -52,8 +52,8 @@ function Header() {
 
      {session?   <Image
           src={session.user.image}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           alt="user_image"
           className="rounded-full cursor-pointer"
           onClick={()=>router.push('/profile')}
